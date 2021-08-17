@@ -6,6 +6,6 @@ void main() {
     MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'custom app bars',
-    home: home(),
+    home: s(),
   ));
 }
