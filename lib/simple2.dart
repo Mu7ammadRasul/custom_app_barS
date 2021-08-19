@@ -1,17 +1,14 @@
-import 'package:custom_app_bar/simple2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
-
-class s1 extends StatefulWidget {
-  const s1({ Key? key }) : super(key: key);
+class s2 extends StatefulWidget {
+  const s2({ Key? key }) : super(key: key);
 
   @override
-  _s1State createState() => _s1State();
+  _s2State createState() => _s2State();
 }
 
-class _s1State extends State<s1> {
+class _s2State extends State<s2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +16,7 @@ class _s1State extends State<s1> {
           splashColor: Colors.white,
           backgroundColor: Colors.black,
           onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (_) => s2()));
+            //Navigator.push(context, MaterialPageRoute(builder: (_) => s3()));
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 content: Text('you pressed floating button :)',
@@ -42,29 +39,43 @@ class _s1State extends State<s1> {
                         Navigator.pop(context);
                       },
                       icon: Icon(
-                        Icons.arrow_back,
+                        Icons.arrow_back_ios,
                         color: Colors.black,
                         size: 30,
                       ),
                 ),
               ),
               Text(
-                'Main1',
+                'Main2',
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.w400,
+                ),
+              ),
+              Row(
+                children: [
+                InkWell(
+                child: IconButton(
+                  onPressed: (){
+
+                  },
+                  icon: Icon(Icons.search,
+                  size: 30,
+                  ),
                 ),
               ),
               InkWell(
                 child:  IconButton(
                       onPressed: () {},
                       icon: Icon(
-                        Icons.search,
+                        Icons.settings,
                         color: Colors.black,
                         size: 30,
                       ),
                 ),
               ),
+              ],),
+              
             ],
           ),
         ),
@@ -93,7 +104,8 @@ class _s1State extends State<s1> {
           Divider(),
         ]))
           ],
-        )
+        ),
+
       ),
     );
   }
