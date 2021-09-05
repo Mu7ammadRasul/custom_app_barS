@@ -1,4 +1,5 @@
 import 'package:custom_app_bar/simple1.dart';
+import 'package:custom_app_bar/simple2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -25,64 +26,70 @@ class _s extends State<s> {
           child: Icon(Icons.add),
         ),
         body: SafeArea(
-            child: Column(
+        child: Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              InkWell(
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(10)),
-                  height: 50,
-                  width: 50,
-                  child: Center(
-                    child: IconButton(
-                      onPressed: () {
-                        
-                      },
-                      icon: Icon(
-                        Icons.arrow_back,
-                        color: Colors.white,
-                        size: 30,
+        ClipRRect(
+          borderRadius: BorderRadius.only(bottomRight: Radius.circular(15), bottomLeft: Radius.circular(15)),
+          child: Container(
+            color: Colors.blue,
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InkWell(
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(10)),
+                      height: 50,
+                      width: 50,
+                      child: Center(
+                        child: IconButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: Icon(
+                            Icons.arrow_back,
+                            color: Colors.white,
+                            size: 30,
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ),
-              Text(
-                'Main',
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.w900,
-                ),
-              ),
-              InkWell(
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(10)),
-                  height: 50,
-                  width: 50,
-                  child: Center(
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.search,
-                        color: Colors.white,
-                        size: 30,
+                  Text(
+                    'Simple',
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                  InkWell(
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(10)),
+                      height: 50,
+                      width: 50,
+                      child: Center(
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.search,
+                            color: Colors.white,
+                            size: 30,
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                ),
+                ],
               ),
-            ],
+            ),
           ),
         ),
-
+          SizedBox(height: 1),
         // app bar has done
         Expanded(
             child: ListView(children: [

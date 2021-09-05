@@ -1,3 +1,4 @@
+import 'package:custom_app_bar/simple.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class _s2State extends State<s2> {
           splashColor: Colors.white,
           backgroundColor: Colors.black,
           onPressed: (){
-            //Navigator.push(context, MaterialPageRoute(builder: (_) => s3()));
+           // Navigator.push(context, MaterialPageRoute(builder: (_) => s()));
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 content: Text('you pressed floating button :)',
@@ -36,7 +37,7 @@ class _s2State extends State<s2> {
               InkWell(
                 child: IconButton(
                       onPressed: () {
-                        Navigator.pop(context);
+                      Navigator.pop(context);
                       },
                       icon: Icon(
                         Icons.arrow_back_ios,
@@ -46,7 +47,7 @@ class _s2State extends State<s2> {
                 ),
               ),
               Text(
-                'Main2',
+                'Simple2',
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.w400,

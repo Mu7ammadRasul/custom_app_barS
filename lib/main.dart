@@ -1,4 +1,6 @@
-import 'package:custom_app_bar/simple.dart';
+
+import 'package:custom_app_bar/main1.dart';
+import 'package:custom_app_bar/simple2.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -6,6 +8,6 @@ void main() {
     MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'custom app bars',
-    home: s(),
+    home: m1(),
   ));
 }
