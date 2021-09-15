@@ -31,7 +31,7 @@ class _s extends State<s> {
         ClipRRect(
           borderRadius: BorderRadius.only(bottomRight: Radius.circular(15), bottomLeft: Radius.circular(15)),
           child: Container(
-            color: Colors.blue,
+            color: Colors.white,
             child: Padding(
               padding: const EdgeInsets.all(15.0),
               child: Row(

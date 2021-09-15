@@ -1,16 +1,15 @@
-import 'package:custom_app_bar/main2.dart';
 import 'package:custom_app_bar/simple.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class m1 extends StatefulWidget {
-  const m1({Key? key}) : super(key: key);
+class m2 extends StatefulWidget {
+  const m2({Key? key}) : super(key: key);
 
   @override
-  _m1State createState() => _m1State();
+  _m2State createState() => _m2State();
 }
 
-class _m1State extends State<m1> {
+class _m2State extends State<m2> {
   Color _color = Colors.white;
   double _h = 0;
   double _wd = 0;
@@ -23,62 +22,78 @@ class _m1State extends State<m1> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.forward),
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (_) => m2()));
+          Navigator.push(context, MaterialPageRoute(builder: (_) => s()));
         },
       ),
       body: SafeArea(
         child: Column(
           children: [
-            ClipRRect(
-              borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(15),
-                  bottomRight: Radius.circular(15)),
-              child: Container(
-                color: Colors.white,
-                child: Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      InkWell(
-                          child: IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  if (_wd == 0) {
-                                    _wd = MediaQuery.of(context).size.width;
-                                    _hd = MediaQuery.of(context).size.height *
-                                        0.75;
-                                  } else {
-                                    _wd = 0;
-                                    _hd = 0;
-                                  }
-                                });
-                                // drawer here
-                              },
-                              icon: Icon(Icons.menu))),
-                      Text(
-                        'Main1',
-                        style: TextStyle(fontSize: 25),
-                      ),
-                      InkWell(
-                        child: IconButton(
+            Padding(
+          padding: const EdgeInsets.only(top: 7.0, left: 7, right: 7),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Container(
+              color: Colors.amberAccent,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InkWell(
+                    child: IconButton(
                           onPressed: () {
-                            setState(() {
+                          Navigator.pop(context);
+                          },
+                          icon: Icon(
+                            Icons.arrow_back_ios,
+                            color: Colors.black,
+                            size: 25,
+                          ),
+                    ),
+                  ),
+                  Text(
+                    'Main2',
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  Row(
+                    children: [
+                    InkWell(
+                    child: IconButton(
+                      onPressed: (){
+                   setState(() {
+                               
                               if (_h == 0) {
                                 _h = 70;
                               } else {
                                 _h = 0;
                               }
                             });
-                          },
-                          icon: Icon(Icons.search),
-                        ),
-                      )
-                    ],
+                      },
+                      icon: Icon(Icons.search,
+                      size: 25,
+                      ),
+                    ),
                   ),
-                ),
+                  InkWell(
+                    child:  IconButton(
+                          onPressed: () {
+                            
+                          },
+                          icon: Icon(
+                            Icons.settings,
+                            color: Colors.black,
+                            size: 25,
+                          ),
+                    ),
+                  ),
+                  ],),
+                  
+                ],
               ),
             ),
+          ),
+        ),
             //-------------------------------------
             Expanded(
               child: Padding(
