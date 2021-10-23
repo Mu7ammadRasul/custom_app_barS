@@ -1,3 +1,4 @@
+import 'package:custom_app_bar/main3.dart';
 import 'package:custom_app_bar/simple.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class _m2State extends State<m2> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.forward),
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (_) => s()));
+          Navigator.push(context, MaterialPageRoute(builder: (_) => m3()));
         },
       ),
       body: SafeArea(
