@@ -94,7 +94,7 @@ class _s2State extends State<s2> {
                   borderRadius: BorderRadius.circular(5),
                   image: DecorationImage(
                       fit: BoxFit.fill,
-                      image: AssetImage('asset/MyCV.jpg'))),
+                      image: AssetImage('asset/bg.jpg'))),
             ),
           ),
           Divider(),

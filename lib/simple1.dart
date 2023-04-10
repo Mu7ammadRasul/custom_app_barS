@@ -79,7 +79,7 @@ class _s1State extends State<s1> {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
                     image: DecorationImage(
-                        fit: BoxFit.fill, image: AssetImage('asset/MyCV.jpg'))),
+                        fit: BoxFit.fill, image: AssetImage('asset/bg.jpg'))),
               ),
             ),
             Divider(),
